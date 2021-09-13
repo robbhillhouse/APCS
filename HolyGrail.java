@@ -1,12 +1,13 @@
 import java.util.Scanner;
-
-public class HolyGrail
 /**
+ * Class HolyGrail takes inputs from the user and outputs it at the end
  * @version 9/15/2021
  * @author 23hillhouse
  */
-
-{
+public class HolyGrail {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("* A chat with the bridge keeper *");
