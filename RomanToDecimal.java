@@ -1,8 +1,19 @@
 import java.util.Locale;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * @author Robert Hillhouse
+ * @version 10/3/21
+ */
 
 public class RomanToDecimal {
+    /**
+     * For each roman numeral I changed the string to an int corresponding to the roman numeral's value
+     * @param roman
+     * @return
+     */
     public static int romanToDecimal(String roman) {
         int decimal = 0;
         for (int i = 0; i < roman.length(); i++) {
@@ -52,12 +63,24 @@ public class RomanToDecimal {
     }
 
     public static void main(String[] args)  {
+        Scanner user = new Scanner(System.in);
         for(String temp : args) {
             int val = romanToDecimal(temp);
             if(val == -1)
                 System.out.println("Input: " + temp + " => output: Invalid");
             else
                 System.out.println("Input: " + temp + " => output: " + val);
+
         }
+        System.out.println("Enter Roman Numerals: ");
+        String input = user.nextLine();
+        int decimal = romanToDecimal(input);
+        if (decimal == -1) {
+            System.out.println("input: " + input.toUpperCase() + " => output: invalid");
+        }
+        else    {
+            System.out.println("input: " + input.toUpperCase() + " => output: " + decimal);
+        }
+
     }
 }
