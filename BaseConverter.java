@@ -38,7 +38,7 @@ public class BaseConverter {
     public void myExtra()   {
         JFileChooser chooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
-                "JPG & GIF Images", "jpg", "gif");
+                "Pictures and data Files", "jpg", "gif", "dat", "txt");
         chooser.setFileFilter(filter);
         int returnVal = chooser.showOpenDialog(null);
         if(returnVal == JFileChooser.APPROVE_OPTION) {
