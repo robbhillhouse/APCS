@@ -91,7 +91,12 @@ public class SubWordFinder implements WordFinder {
     }*/
     public static void main(String[] args) {
         SubWordFinder app = new SubWordFinder();
-        //app.populateDictionary();
-        app.getSubWords();
+        ArrayList<SubWord> temp = app.getSubWords();
+
+        for(SubWord w : temp)   {
+            System.out.println(w);
+        }
+
+        System.out.println(temp.size());
     }
 }
